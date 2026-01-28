@@ -1,7 +1,8 @@
-import { supabase } from "../../../../lib/supabase";
+import { createClient } from '@/lib/supabase/server'
 
 export async function POST(req) {
   try {
+    const supabase = await createClient()
     const { imageBase64, category, fact } = await req.json();
 
 

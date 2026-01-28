@@ -1,7 +1,12 @@
-import { supabase } from "../../../../lib/supabase";
+import { createClient } from '@/lib/supabase/server'
+
+
+
+
 
 export async function DELETE(req) {
   try {
+    const supabase = await createClient()
     const { id, image_path } = await req.json();
 
     // 1. delete from storage
