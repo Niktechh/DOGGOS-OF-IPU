@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Footer from "@/components/Footer";
-
+import Navbar from "@/components/Navbar";
 
 export default function JoinUsPage() {
   const GOOGLE_FORM_URL =
@@ -10,8 +10,9 @@ export default function JoinUsPage() {
 
   return (
     <main className="w-full overflow-hidden">
+      <Navbar />
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-r from-[#dff1f6] to-[#e8f7f3] py-20 px-6">
+      <section className="bg-linear-to-r from-[#dff1f6] to-[#e8f7f3] py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Left Content */}
           <div>

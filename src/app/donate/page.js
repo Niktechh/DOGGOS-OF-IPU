@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import ContactSection from "@/components/ContactSection";
-
+import Navbar from "@/components/Navbar";
 export default function DonatePage() {
   return (
     <main className="bg-white text-gray-800">
-
+      <Navbar />
       {/* HERO */}
       <section
         className="relative h-175 flex items-end justify-center text-center"
