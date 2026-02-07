@@ -25,7 +25,7 @@ export default async function AdoptionGallery() {
     <div className="flex flex-col min-h-screen paw-texture overflow-x-hidden">
       <Navbar />
       
-      <main className="flex-grow pb-20 bg-transparent">
+      <main className="grow pb-20 bg-transparent">
         
         <div className="w-full h-64 md:h-80 mb-12 relative overflow-hidden bg-[#E5E7EB]">
           <img 

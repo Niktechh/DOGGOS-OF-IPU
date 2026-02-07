@@ -20,7 +20,7 @@ export default async function DogProfile({ params }) {
     return (
       <div className="flex flex-col min-h-screen paw-texture" style={{ backgroundColor: '#F9FBFC' }}>
         <Navbar />
-        <main className="flex-grow flex flex-col items-center justify-center gap-6">
+        <main className="grow flex flex-col items-center justify-center gap-6">
           <p className="text-3xl font-black uppercase text-[#2E2E2E]">Doggo not found!</p>
           <BackButton />
         </main>
@@ -33,7 +33,7 @@ export default async function DogProfile({ params }) {
     <div className="flex flex-col min-h-screen paw-texture" style={{ backgroundColor: '#F9FBFC' }}>
       <Navbar />
       
-      <main className="flex-grow py-10 flex items-center justify-center px-4">
+      <main className="grow py-10 flex items-center justify-center px-4">
         <div className="w-full max-w-sm bg-white/80 backdrop-blur-md rounded-[50px] shadow-2xl overflow-hidden border border-white/50">
           
           
