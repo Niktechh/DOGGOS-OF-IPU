@@ -20,7 +20,7 @@ export default function MeetOurTeam() {
   const teamCursorRefs = useRef([]);
   const [page, setPage] = useState({});
   const [itemsPerPage, setItemsPerPage] = useState(4);
-  const [pawFundingIndex, setPawFundingIndex] = useState(0); // 0 = Paw-Home Finder, 1 = Paw-Funding
+  const [pawFundingIndex, setPawFundingIndex] = useState(0); 
   const [isDesktop, setIsDesktop] = useState(false);
   const prevItemsPerPageRef = useRef(4);
   const [imageRemountKey, setImageRemountKey] = useState(0);
@@ -38,10 +38,10 @@ export default function MeetOurTeam() {
 useEffect(() => {
   setMounted(true);
   
-  // Set items per page based on screen size and track desktop state
+
   const updateItemsPerPage = () => {
     const width = window.innerWidth;
-    const wasDesktop = width >= 768; // Check current state
+    const wasDesktop = width >= 768; 
     setIsDesktop(wasDesktop);
     
     let newItemsPerPage;
@@ -52,11 +52,10 @@ useEffect(() => {
     } else {
       newItemsPerPage = 4;
     }
-    
-    // If switching from mobile to desktop (items per page increased significantly), reset page state and remount images
+
     const prevItems = prevItemsPerPageRef.current;
     if (prevItems < newItemsPerPage && prevItems <= 2 && newItemsPerPage >= 4) {
-      // Switching from mobile (1-2 items) to desktop (4 items), reset page and force image remount
+
       setPage({});
       setImageRemountKey(prev => prev + 1);
     }
@@ -377,12 +376,12 @@ if (!mounted) return null;
   `}
   style={{ background: team.bg }}
 >
-  {/* EMOJI CURSOR */}
+  {/* icon CURSOR */}
 <div className="emoji-cursor absolute top-0 left-0 pointer-events-none z-50 text-[38px] text-[#4FB6B2]">
 {teamIconMap[team.name] || <IoPawSharp />}
 </div>
             {team.name === "Paw-Funding" ? (
-              /* SIDE BY SIDE ON DESKTOP, CAROUSEL ON MOBILE */
+              
               <>
                 <div className="hidden md:grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
                   {/* LEFT — PAW HOME FINDER */}
